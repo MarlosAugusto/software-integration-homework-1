@@ -6,7 +6,6 @@ import service from './service';
 async function listContinents(req: Request, res: Response, next: NextFunction) {
   try {
     await service.listContinents(false, (data) => {
-      console.log({data})  
       res.status(200).send(data);
     });
   } catch (err) {
@@ -16,7 +15,6 @@ async function listContinents(req: Request, res: Response, next: NextFunction) {
 async function listContinentsJSON(req: Request, res: Response, next: NextFunction) {
   try {
     await service.listContinents(true, (data) => {
-      console.log({data})  
       res.status(200).send(data);
     });
   } catch (err) {
