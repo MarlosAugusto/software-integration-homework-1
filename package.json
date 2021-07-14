@@ -5,8 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "tsnd --respawn --transpile-only src/index.ts",
-    "soap": "tsnd --respawn --transpile-only src/soap.ts"
+    "start": "tsnd --respawn --transpile-only src/index.ts"
   },
   "keywords": [],
   "author": "",
