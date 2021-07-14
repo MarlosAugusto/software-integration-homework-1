@@ -16,7 +16,8 @@ async function listContinents(JSON: boolean, callback) {
 async function listContrys(JSON: boolean, callback) {
   await soap.createClient(url, async function(err, client) {
     if(err) return console.log(err);
-    return client.ListOfCountryNamesByName(async function(err, { ListOfCountryNamesByNameResult: tCountryCodeAndName }, rawResponse) {
+    return client.ListOfCountryNamesByName(async function(err, { ListOfCountryNamesByNameResult: { tCountryCodeAndName } }, rawResponse) {
+      console.log({tCountryCodeAndName})
         if(err) return err;
         callback(JSON ? tCountryCodeAndName : rawResponse)
     });
